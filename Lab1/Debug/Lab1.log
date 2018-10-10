@@ -1,6 +1,5 @@
-﻿  pch.cpp
+﻿  Lab1.cpp
   UnorderedArray.cpp
-  Lab1.cpp
   Generating Code...
-c:\users\gameuser\downloads\unorderedarray.cpp(116): warning C4715: 'UnorderedArray<int>::search': not all control paths return a value
+c:\users\gameuser\source\repos\ds and algorithms\lab1\lab1\unorderedarray.cpp(92): warning C4715: 'UnorderedArray<int>::search': not all control paths return a value
   Lab1.vcxproj -> C:\Users\gameuser\source\repos\DS and Algorithms\Lab1\Debug\Lab1.exe

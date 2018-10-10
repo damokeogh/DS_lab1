@@ -18,7 +18,7 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Downloads\UnorderedArray.h">
+    <ClInclude Include="UnorderedArray.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -29,7 +29,7 @@
     <ClCompile Include="Lab1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Downloads\UnorderedArray.cpp">
+    <ClCompile Include="UnorderedArray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,6 +1,9 @@
 #include "pch.h"
 #include "UnorderedArray.h"
 
+
+//Constructor
+//creates Array of the size passed and gives a grow size. Array is empty?
 template<typename T>
 UnorderedArray<T>::UnorderedArray(int size, int growBy) :
 	m_array(0), m_maxSize(0),
@@ -17,6 +20,7 @@ UnorderedArray<T>::UnorderedArray(int size, int growBy) :
 	}
 }
 
+//Destructor
 template<typename T>
 UnorderedArray<T>::~UnorderedArray()
 {
@@ -27,7 +31,8 @@ UnorderedArray<T>::~UnorderedArray()
 }
 
 
-
+//adds another element on to end of array
+//only way to add elements?
 template <typename T>
 void UnorderedArray<T>::push(T val) 
 {
@@ -44,6 +49,7 @@ void UnorderedArray<T>::push(T val)
 	m_numElements++;
 }
 
+//removes an element from array
 template <typename T>
 void UnorderedArray<T>::pop() 
 {
@@ -53,12 +59,46 @@ void UnorderedArray<T>::pop()
 	}
 }
 
+//returns value at passed index
 template <typename T>
 T & UnorderedArray<T>::operator[](int index) 
 {
 	assert(m_array != 0 && index <= m_numElements);
 	return m_array[index];
 }
+
+
+
+//Q2 Implementation
+template <typename T>
+int UnorderedArray<T>::search(T val)
+{
+	bool present = false;
+	for (int i = 0; i < m_numElements - 1; i++)
+	{
+		if (val == m_array[i] && present != true) 
+		{
+			return i;
+			//i = m_numElements;
+			present = true;
+		}
+	}
+	if (present == false)
+	{
+		return -1;
+	}
+
+
+}
+
+//Q3 Implementation
+template <typename T>
+void UnorderedArray<T>::remove(int index)
+{
+
+
+}
+
 
 template <typename T>
 void UnorderedArray<T>::clear()
@@ -90,6 +130,8 @@ void UnorderedArray<T>::setGrowSize(int val)
 	m_growSize = val;
 }
 
+
+//
 template <typename T>
 bool UnorderedArray<T>::expand() 
 {

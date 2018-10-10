@@ -29,6 +29,8 @@ public:
 	int getMaxSize();
 	int getGrowSize();
 	void setGrowSize(int val);
+	int search(T val);
+	void remove(int index);
 
 private:
 	bool expand();
