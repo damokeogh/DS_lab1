@@ -97,11 +97,14 @@ void UnorderedArray<T>::remove(int index)
 {
 	if (index < m_numElements && index >= 0 ) 
 	{
-		for (size_t i = 0; i < length; i++)
-		{
-			UnorderedArray[index] = UnorderedArray[index + i]
-		}
+	
 		
+			for (int i = index; i < m_numElements - 1; i++)
+			{
+				m_array[i] = m_array[i + 1];
+			}
+			pop();
+	
 	}
 
 }
