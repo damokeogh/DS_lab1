@@ -49,7 +49,7 @@ void UnorderedArray<T>::push(T val)
 	m_numElements++;
 }
 
-//removes an element from array
+//removes an element from end of array
 template <typename T>
 void UnorderedArray<T>::pop() 
 {
@@ -59,7 +59,7 @@ void UnorderedArray<T>::pop()
 	}
 }
 
-//returns value at passed index
+//returns value of passed index
 template <typename T>
 T & UnorderedArray<T>::operator[](int index) 
 {
@@ -95,7 +95,14 @@ int UnorderedArray<T>::search(T val)
 template <typename T>
 void UnorderedArray<T>::remove(int index)
 {
-
+	if (index < m_numElements && index >= 0 ) 
+	{
+		for (size_t i = 0; i < length; i++)
+		{
+			UnorderedArray[index] = UnorderedArray[index + i]
+		}
+		
+	}
 
 }
 
